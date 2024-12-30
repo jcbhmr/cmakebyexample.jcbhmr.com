@@ -1,0 +1,100 @@
+import { Tabs, Callout, FileTree } from "nextra/components";
+
+# Hello world
+
+First, let's examine our C code that we want to compile using CMake:
+
+```c filename="main.c"
+#include <stdio.h>
+int main() {
+    puts("Hello, World!");
+    return 0;
+}
+```
+
+We can compile it using a C compiler like `gcc`, `clang`, or `cl`:
+
+<Tabs items={["gcc", "clang", "cl"]}>
+    <Tabs.Tab>
+        ```sh
+        gcc -o hello-world main.c
+        ```
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```sh
+        clang -o hello-world main.c
+        ```
+    </Tabs.Tab>
+    <Tabs.Tab>
+        ```sh
+        cl /Fe:hello-world.exe main.c
+        ```
+    </Tabs.Tab>
+</Tabs>
+
+<Callout type="info">
+    `cl` is the Microsoft C/C++ compiler that comes with Visual Studio.
+</Callout>
+
+Now we have a `hello-world` (or `hello-world.exe` on Windows) executable that we can run:
+
+```sh
+./hello-world
+```
+
+```
+Hello, World!
+```
+
+<Callout emoji="❓">
+    Don't know what's going on? Check out [C by Example](https://www.cbyexample.com/) for a quick introduction to C and C++ programming.
+</Callout>
+
+But how do we compile this code using CMake? Let's create a `CMakeLists.txt` file in the same directory as `main.c`:
+
+<FileTree>
+    <FileTree.File name="CMakeLists.txt" />
+    <FileTree.File name="main.c" />
+</FileTree>
+
+```cmake filename="CMakeLists.txt"
+# First we require a minimum version of CMake. You can find the latest version
+# on the CMake website: https://cmake.org/download/
+cmake_minimum_required(VERSION 3.30)
+
+# Next we define a project. Think of a project as similar to a Python package,
+# a JavaScript package, a Rust package, etc. This project() function call
+# will define all subsequent targets (executables, libraries, etc.) in the
+# scope of this project.
+project(hello-world)
+
+# Finally, we add an executable target. This will create an executable named
+# "hello-world" from the source file "main.c".
+add_executable(hello-world main.c)
+```
+
+Now we can compile our code using CMake:
+
+```sh
+# The -B flag tells CMake to output the platform-specific build system files to
+# the build folder instead of the current directory. This is recommended. It
+# makes it easier to .gitignore the entire build folder rather than sorting
+# through the bajillion files CMake generates.
+cmake -B build
+
+# The --build flag tells CMake to perform the "build" operation on the existing
+# platform-specific build system files in the build folder. Build artifacts will
+# be placed in that same build folder. Other operations include "--install" and
+# "--workflow".
+cmake --build build
+```
+
+And finally we can run the resulting `hello-world` executable:
+
+```sh
+./build/hello-world
+```
+
+```
+Hello, World!
+```

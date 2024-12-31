@@ -4,5 +4,4 @@ CMake is an open source cross-platform meta build system that works on Windows, 
 
 *CMake by Example* is a hands-on introduction to how to use CMake to build C/C++ projects using annotated example projects. Make sure you have [installed the latest version of CMake on your system](https://cmake.org/download/). Check out the first [Hello world](hello-world.md) example to get started.
 
-<!-- This works because our `SUMMARY.md` just so happens to match the format that we need here. -->
-{{#include SUMMARY.md:7:}}
+<!-- cmdrun grep '^- ' SUMMARY.md | sed 's/README\.md/index.html/' -->

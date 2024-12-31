@@ -1,11 +1,12 @@
 # Summary
 
-[CMake by Example](index.md)
+[CMake by Example](README.md)
 
 ---
 
-- [Hello world](hello-world.md)
-- [Values](values.md)
+- [Hello world](hello-world/README.md)
+- [Logging](logging/README.md)
+- [Values](values/README.md)
 - [Variables]()
 - [Executables]()
 - [Libraries]()
@@ -29,7 +30,6 @@
 - [HTTP requests]()
 - [String functions]()
 - [JSON]()
-- [Logging]()
 - [Environment variables]()
 - [Feature detection]()
 - [clang-format]()

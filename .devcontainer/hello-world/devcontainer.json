@@ -1,0 +1,5 @@
+{
+    "name": "Hello world",
+    "image": "mcr.microsoft.com/devcontainers/cpp",
+    "workspaceFolder": "${localWorkspaceFolder}/src/hello-world"
+}

@@ -11,16 +11,13 @@ Make sure you've installed [mdBook](https://rust-lang.github.io/mdBook/guide/ins
 
 The custom `theme/highlight.js` is needed because the default mdBook `highlight.js` doesn't include the `cmake` language. The current custom build includes [all of the mdBook defaults](https://rust-lang.github.io/mdBook/format/theme/syntax-highlighting.html#supported-languages) plus `cmake`. Generate it using https://highlightjs.org/download and use the `./highlight.min.js` file from the resulting `.zip` download.
 
-To create a new example:
+To create a new example ("Cool feature" in this example):
 
-1. Come up with a slug like `cool-feature`.
-2. Add it to `src/SUMMARY.md` like `- [Cool feature](cool-feature/index.md)`.
-3. Create a new folder to hold the example like `src/cool-feature`.
-4. Add a `README.md` to the new folder.
-5. Create your example. Take note of any dependencies it needs (Clang, clang-format, Vcpkg, Conan, etc.).
-6. Add a lot of comments to your code files to explain what's going on. The `README.md` is for shell commands. The code files are for other prose.
-7. `{{#include filename.txt}}` any relevant files in the `src/cool-feature/README.md` inside `` ``` `` code blocks.
-8. Add any shell commands to interact with the example to the `src/cool-feature/README.md`. Make sure to document them.
-9. (Optional) Use `<!-- cmdrun cmake ... -->` or similar inside a `` ``` `` code block to run that command and use its output at build time.
-10. Create a corresponding `.devcontainer/cool-feature/devcontainer.json` that will open the example's folder. Add any necessary dependencies to the dev container.
-11. Add an "Open in Codespaces" button to the `src/cool-feature/README.md`.
+1. Add it to `src/SUMMARY.md` like `- [Cool feature](cool-feature/README.md)`.
+2. Create a `src/cool-feature/README.md`.
+3. Create your example in `src/cool-feature/`. Add a bunch of comments _in the code files_ so that they are visible on the website and when viewing the file in an IDE.
+4. `{{#include filename.txt}}` any interesting files in `src/cool-feature/README.md`.
+5. Add any shell commands to interact with the example to the `src/cool-feature/README.md`. Make sure to document them.
+6. (Optional) Use `<!-- cmdrun cmake ... -->` or similar inside a `` ``` `` code block to run that command and use its output at build time.
+7. Create a corresponding `.devcontainer/cool-feature/devcontainer.json` that will open the example's folder. Add any necessary dependencies to the dev container.
+8. Add an "Open in Codespaces" button to the `src/cool-feature/README.md`.

@@ -35,10 +35,9 @@ jobs:
         uses: peaceiris/actions-mdbook@v2
       # https://github.com/FauconFan/mdbook-cmdrun
       - run: cargo install mdbook-cmdrun
-      - name: Set up GCC
-        uses: egor-tensin/setup-gcc@v1
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v2
+      # For now the default GCC version is OK.
 
       - name: Setup Pages
         id: pages

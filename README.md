@@ -1,9 +1,10 @@
 <p align=center>
-    <b><a href="https://cmakebyexample.dev/">You're probably looking for cmakebyexample.dev 😉</a></b>
+    <b><a href="https://cmakebyexample.jcbhmr.com/">You're probably looking for cmakebyexample.jcbhmr.com 😉</a></b>
 </p>
 
 ## Development
 
-![Vite](https://img.shields.io/static/v1?style=for-the-badge&message=Vite&color=646CFF&logo=Vite&logoColor=FFFFFF&label=) ![Vue.js](https://img.shields.io/static/v1?style=for-the-badge&message=Vue.js&color=222222&logo=Vue.js&logoColor=4FC08D&label=) ![CMake](https://img.shields.io/static/v1?style=for-the-badge&message=CMake&color=064F8C&logo=CMake&logoColor=FFFFFF&label=)
+![mdBook](https://img.shields.io/static/v1?style=for-the-badge&message=mdBook&color=000000&logo=mdBook&logoColor=FFFFFF&label=)
+![CMake](https://img.shields.io/static/v1?style=for-the-badge&message=CMake&color=064F8C&logo=CMake&logoColor=FFFFFF&label=)
 
-Use `npm run dev` to spin up the [VitePress](https://vitepress.dev/) dev server.
+Make sure you've installed [mdBook](https://rust-lang.github.io/mdBook/guide/installation.html) and [CMake](https://cmake.org/download/). Run `mdbook serve` to see the live preview.

@@ -8,3 +8,6 @@ title = "CMake by Example"
 [output.html]
 git-repository-url = "https://github.com/jcbhmr/cmakebyexample.jcbhmr.com"
 edit-url-template = "https://github.com/jcbhmr/cmakebyexample.jcbhmr.com/edit/main/{path}"
+
+# https://github.com/FauconFan/mdbook-cmdrun
+[preprocessor.cmdrun]

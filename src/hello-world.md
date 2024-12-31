@@ -9,5 +9,13 @@
 ```
 
 ```sh
-{{#include hello-world/run}}
+cmake -B build
+
+cmake --build build
+
+./build/hello-world
+```
+
+```
+<!-- cmdrun cd hello-world && cmake -B build && cmake --build build && ./build/hello-world -->
 ```

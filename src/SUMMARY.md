@@ -5,8 +5,7 @@
 ---
 
 - [Hello world](hello-world.md)
-- [Project]()
-- [Values]()
+- [Values](values.md)
 - [Variables]()
 - [Executables]()
 - [Libraries]()

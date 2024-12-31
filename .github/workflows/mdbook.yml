@@ -33,10 +33,10 @@ jobs:
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
-
       # https://github.com/FauconFan/mdbook-cmdrun
       - run: cargo install mdbook-cmdrun
-
+      - name: Set up GCC
+        uses: egor-tensin/setup-gcc@v1
       - name: Setup cmake
         uses: jwlawson/actions-setup-cmake@v2
 

@@ -1,0 +1,6 @@
+{
+    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
+    "workspaceMount": "source=${localWorkspaceFolder}/src/logging,target=/workspace,type=bind,consistency=cached",
+    "workspaceFolder": "/workspaces/logging",
+    "updateContentCommand": "curl -fsSL https://apt.kitware.com/kitware-archive.sh | sh"
+}

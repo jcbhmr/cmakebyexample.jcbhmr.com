@@ -7,9 +7,17 @@
 ![mdBook](https://img.shields.io/static/v1?style=for-the-badge&message=mdBook&color=000000&logo=mdBook&logoColor=FFFFFF&label=)
 ![CMake](https://img.shields.io/static/v1?style=for-the-badge&message=CMake&color=064F8C&logo=CMake&logoColor=FFFFFF&label=)
 
-Make sure you've installed [mdBook](https://rust-lang.github.io/mdBook/guide/installation.html) and [CMake](https://cmake.org/download/). You'll also need to install [mdbook-cmdrun](https://github.com/FauconFan/mdbook-cmdrun). Run `mdbook serve` to see the live preview.
+Make sure you've installed:
 
-The custom `theme/highlight.js` is needed because the default mdBook `highlight.js` doesn't include the `cmake` language. The current custom build includes [all of the mdBook defaults](https://rust-lang.github.io/mdBook/format/theme/syntax-highlighting.html#supported-languages) plus `cmake`. Generate it using https://highlightjs.org/download and use the `./highlight.min.js` file from the resulting `.zip` download.
+- [CMake](https://cmake.org/download/)
+- [mdBook](https://rust-lang.github.io/mdBook/)
+- [mdbook-cmdrun](https://github.com/FauconFan/mdbook-cmdrun)
+- [mdbook-codename](https://github.com/smallkirby/mdbook-codename)
+- clang-format
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jcbhmr/cmakebyexample.jcbhmr.com?quickstart=1&devcontainer_path=.devcontainer%2Fdevcontainer.json)
+
+The custom `theme/highlight.js` is needed because the default mdBook `highlight.js` doesn't include the some languages. To regenerate a custom build of `theme/highlight.js` use `./task.cmake generate`.
 
 To create a new example ("Cool feature" in this example):
 

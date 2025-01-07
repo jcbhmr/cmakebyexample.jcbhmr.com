@@ -33,10 +33,11 @@ jobs:
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
-      # https://github.com/FauconFan/mdbook-cmdrun
-      - run: cargo install mdbook-cmdrun
+      - run: cargo install mdbook-cmdrun mdbook-codename
       # Included CMake version is OK.
       # Included GCC version is OK.
+      - uses: bjia56/setup-cosmocc@main
+      - uses: mlugg/setup-zig@v1
 
       - name: Setup Pages
         id: pages

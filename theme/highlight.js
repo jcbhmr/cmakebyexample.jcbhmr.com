@@ -579,7 +579,18 @@ match:a.either(/^@@ +-\d+,\d+ +\+\d+,\d+ +@@/,/^\*\*\* +\d+,\d+ +\*\*\*\*$/,/^--
 begin:a.either(/Index: /,/^index/,/={3,}/,/^-{3}/,/^\*{3} /,/^\+{3}/,/^diff --git/),
 end:/$/},{match:/^\*{15}$/}]},{className:"addition",begin:/^\+/,end:/$/},{
 className:"deletion",begin:/^-/,end:/$/},{className:"addition",begin:/^!/,
-end:/$/}]}}})();hljs.registerLanguage("diff",e)})();/*! `go` grammar compiled for Highlight.js 11.10.0 */
+end:/$/}]}}})();hljs.registerLanguage("diff",e)})();/*! `dos` grammar compiled for Highlight.js 11.10.0 */
+(()=>{var e=(()=>{"use strict";return e=>{const r=e.COMMENT(/^\s*@?rem\b/,/$/,{
+relevance:10});return{name:"Batch file (DOS)",aliases:["bat","cmd"],
+case_insensitive:!0,illegal:/\/\*/,keywords:{
+keyword:["if","else","goto","for","in","do","call","exit","not","exist","errorlevel","defined","equ","neq","lss","leq","gtr","geq"],
+built_in:["prn","nul","lpt3","lpt2","lpt1","con","com4","com3","com2","com1","aux","shift","cd","dir","echo","setlocal","endlocal","set","pause","copy","append","assoc","at","attrib","break","cacls","cd","chcp","chdir","chkdsk","chkntfs","cls","cmd","color","comp","compact","convert","date","dir","diskcomp","diskcopy","doskey","erase","fs","find","findstr","format","ftype","graftabl","help","keyb","label","md","mkdir","mode","more","move","path","pause","print","popd","pushd","promt","rd","recover","rem","rename","replace","restore","rmdir","shift","sort","start","subst","time","title","tree","type","ver","verify","vol","ping","net","ipconfig","taskkill","xcopy","ren","del"]
+},contains:[{className:"variable",begin:/%%[^ ]|%[^ ]+?%|![^ ]+?!/},{
+className:"function",begin:"^\\s*[A-Za-z._?][A-Za-z0-9_$#@~.?]*(:|\\s+label)",
+end:"goto:eof",contains:[e.inherit(e.TITLE_MODE,{
+begin:"([_a-zA-Z]\\w*\\.)*([_a-zA-Z]\\w*:)?[_a-zA-Z]\\w*"}),r]},{
+className:"number",begin:"\\b\\d+",relevance:0},r]}}})()
+;hljs.registerLanguage("dos",e)})();/*! `go` grammar compiled for Highlight.js 11.10.0 */
 (()=>{var e=(()=>{"use strict";return e=>{const a={
 keyword:["break","case","chan","const","continue","default","defer","else","fallthrough","for","func","go","goto","if","import","interface","map","package","range","return","select","struct","switch","type","var"],
 type:["bool","byte","complex64","complex128","error","float32","float64","int8","int16","int32","int64","string","uint8","uint16","uint32","uint64","int","uint","uintptr","rune"],

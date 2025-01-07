@@ -11,3 +11,6 @@ edit-url-template = "https://github.com/jcbhmr/cmakebyexample.jcbhmr.com/edit/ma
 
 # https://github.com/FauconFan/mdbook-cmdrun
 [preprocessor.cmdrun]
+
+# https://github.com/smallkirby/mdbook-codename
+[preprocessor.codename]

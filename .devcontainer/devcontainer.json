@@ -1,4 +1,17 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/cpp",
-    "updateContentCommand": "cargo install mdbook mdbook-cmdrun"
+    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
+    "features": {
+        "ghcr.io/devcontainers/features/rust": {},
+        "ghcr.io/devcontainers/features/python": {}
+    },
+    "updateContentCommand": "./.devcontainer/updateContentCommand.sh",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dnut.rewrap-revived",
+                "xaver.clang-format",
+                "twxs.cmake"
+            ]
+        }
+    }
 }

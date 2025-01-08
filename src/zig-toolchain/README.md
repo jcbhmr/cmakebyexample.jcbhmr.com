@@ -1,1 +1,47 @@
 # Zig toolchain
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jcbhmr/cmakebyexample.jcbhmr.com?quickstart=1&devcontainer_path=.devcontainer%2Fzig-toolchain%2Fdevcontainer.json)
+
+```cmake:cmake/zig-x86_64-linux-musl.cmake
+{{#include cmake/cosmocc.cmake}}
+```
+
+<details>
+
+```c:main.c
+{{#include main.c}}
+```
+
+```cmake:CMakeLists.txt
+{{#include CMakeLists.txt}}
+```
+
+</details>
+
+```sh:
+cmake --toolchain ./cmake/zig-x86_64-linux-musl.cmake -B ./build/
+```
+
+```
+<!-- cmdrun cmake --fresh --toolchain ./cmake/zig-x86_64-linux-musl.cmake -B ./build/ -->
+```
+
+```sh:
+cmake --build ./build/
+```
+
+```
+<!-- cmdrun cmake --build ./build/ --clean-first -->
+```
+
+<details>
+
+```sh:
+./build/zig-toolchain
+```
+
+```
+<!-- cmdrun ./build/zig-toolchain -->
+```
+
+</details>

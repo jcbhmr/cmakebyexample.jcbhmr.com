@@ -37,3 +37,15 @@ cmake --build ./build/
 ```
 <!-- cmdrun cmake --build ./build/ --clean-first -->
 ```
+
+<details>
+
+```sh:
+./build/cosmocc-toolchain
+```
+
+```
+<!-- cmdrun ./build/cosmocc-toolchain -->
+```
+
+</details>

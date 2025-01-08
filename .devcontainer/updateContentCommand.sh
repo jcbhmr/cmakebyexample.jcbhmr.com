@@ -1,11 +1,14 @@
 #!/usr/bin/env bash
 set -ex
 
+sudo apt-get update
+
 (
     cd "$(mktemp -d)"
-    wget https://apt.kitware.com/kitware-archive.sh
+    # wget doesn't work for some reason. 🤷‍♀️
+    curl -LO https://apt.kitware.com/kitware-archive.sh
     chmod +x ./kitware-archive.sh
-    ./kitware-archive.sh
+    sudo ./kitware-archive.sh
     rm -rf "$PWD"
 )
 sudo apt-get install -y cmake

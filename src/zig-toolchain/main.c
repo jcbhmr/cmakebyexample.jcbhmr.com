@@ -8,5 +8,14 @@ int main() {
     #else
         puts("This is some other architecture");
     #endif
+
+    #if defined(_WIN32) || defined(_WIN64)
+        puts("You're on Windows");
+    #elif defined(__unix__)
+        puts("You're on Linux");
+    #else
+        puts("Not Windows or Linux");
+    #endif
+
     return 0;
 }

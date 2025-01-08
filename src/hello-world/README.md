@@ -26,7 +26,7 @@ cmake -B ./build/
 ```
 
 ```
-<!-- cmdrun cmake --fresh -B ./build/ -->
+<!-- cmdrun exec 2>&1 && cmake --fresh -B ./build/ -->
 ```
 
 ```sh:
@@ -40,7 +40,7 @@ cmake --build ./build/
 ```
 
 ```
-<!-- cmdrun cmake --build ./build/ --clean-first -->
+<!-- cmdrun exec 2>&1 && cmake --build ./build/ --clean-first -->
 ```
 
 ```sh:
@@ -52,5 +52,5 @@ cmake --build ./build/
 ```
 
 ```
-<!-- cmdrun ./build/hello-world -->
+<!-- cmdrun exec 2>&1 && ./build/hello-world -->
 ```

@@ -26,6 +26,6 @@ To create a new example ("Cool feature" in this example):
 3. Create your example in `src/cool-feature/`. Add a bunch of comments _in the code files_ so that they are visible on the website and when viewing the file in an IDE.
 4. `{{#include filename.txt}}` any interesting files in `src/cool-feature/README.md`.
 5. Add any shell commands to interact with the example to the `src/cool-feature/README.md`. Make sure to document them.
-6. (Optional) Use `<!-- cmdrun cmake ... -->` or similar inside a `` ``` `` code block to run that command and use its output at build time.
+6. (Optional) Use `<!-- cmdrun cmake ... -->` or similar inside a `` ``` `` code block to run that command and use its output at build time. Remember to add `--fresh` and `--clean-first` to CMake commands so that the output is reproducable. Also add `exec 2>&1 && ...` so that stderr is redirected to stdout (which is what `mdbook-cmdrun` captures).
 7. Create a corresponding `.devcontainer/cool-feature/devcontainer.json` that will open the example's folder. Add any necessary dependencies to the dev container.
 8. Add an "Open in Codespaces" button to the `src/cool-feature/README.md`.

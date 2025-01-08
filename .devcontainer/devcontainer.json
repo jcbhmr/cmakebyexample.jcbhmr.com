@@ -1,5 +1,5 @@
 {
-    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
+    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04",
     "features": {
         "ghcr.io/devcontainers/features/rust": {},
         "ghcr.io/devcontainers/features/python": {}

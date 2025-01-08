@@ -27,5 +27,5 @@ cmake -P ./cat.cmake ./raven.txt
 ```
 
 ```
-<!-- cmdrun ./cat.cmake ./raven.txt -->
+<!-- cmdrun exec 2>&1 && ./cat.cmake ./raven.txt -->
 ```

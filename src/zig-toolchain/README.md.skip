@@ -1,9 +1,15 @@
+<!--
+The "zig cc" C/C++ Clang toolchain doesn't work with CMake right now.
+https://github.com/ziglang/zig/issues/20709
+https://github.com/ziglang/zig/issues/22269
+-->
+
 # Zig toolchain
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jcbhmr/cmakebyexample.jcbhmr.com?quickstart=1&devcontainer_path=.devcontainer%2Fzig-toolchain%2Fdevcontainer.json)
 
 ```cmake:cmake/zig-x86_64-linux-musl.cmake
-{{#include cmake/cosmocc.cmake}}
+{{#include cmake/zig-x86_64-linux-musl.cmake}}
 ```
 
 <details>
@@ -23,7 +29,7 @@ cmake --toolchain ./cmake/zig-x86_64-linux-musl.cmake -B ./build/
 ```
 
 ```
-<!-- cmdrun cmake --fresh --toolchain ./cmake/zig-x86_64-linux-musl.cmake -B ./build/ -->
+<!-- cmdrun exec 2>&1 && cmake --fresh --toolchain ./cmake/zig-x86_64-linux-musl.cmake -B ./build/ -->
 ```
 
 ```sh:
@@ -31,7 +37,7 @@ cmake --build ./build/
 ```
 
 ```
-<!-- cmdrun cmake --build ./build/ --clean-first -->
+<!-- cmdrun exec 2>&1 && cmake --build ./build/ --clean-first -->
 ```
 
 <details>
@@ -41,7 +47,7 @@ cmake --build ./build/
 ```
 
 ```
-<!-- cmdrun ./build/zig-toolchain -->
+<!-- cmdrun exec 2>&1 && ./build/zig-toolchain -->
 ```
 
 </details>

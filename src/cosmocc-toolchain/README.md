@@ -27,7 +27,7 @@ cmake --toolchain ./cmake/cosmocc.cmake -B ./build/
 ```
 
 ```
-<!-- cmdrun cmake --fresh --toolchain ./cmake/cosmocc.cmake -B ./build/ -->
+<!-- cmdrun exec 2>&1 && cmake --fresh --toolchain ./cmake/cosmocc.cmake -B ./build/ -->
 ```
 
 ```sh:
@@ -35,7 +35,7 @@ cmake --build ./build/
 ```
 
 ```
-<!-- cmdrun cmake --build ./build/ --clean-first -->
+<!-- cmdrun exec 2>&1 && cmake --build ./build/ --clean-first -->
 ```
 
 <details>
@@ -45,7 +45,7 @@ cmake --build ./build/
 ```
 
 ```
-<!-- cmdrun ./build/cosmocc-toolchain -->
+<!-- cmdrun exec 2>&1 && ./build/cosmocc-toolchain -->
 ```
 
 </details>

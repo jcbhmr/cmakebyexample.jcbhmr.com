@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 
-sudo apt-get update
+cargo install mdbook
+cargo install mdbook-cmdrun mdbook-codename
 
 (
     cd "$(mktemp -d)"
@@ -13,8 +14,10 @@ sudo apt-get update
 )
 sudo apt-get install -y cmake
 
-cargo install mdbook
-cargo install mdbook-cmdrun mdbook-codename
+sudo apt-get update
+sudo apt-get install -y clang-format
+
+pipx install cmakelang
 
 (
     cd ~
@@ -27,8 +30,3 @@ cargo install mdbook-cmdrun mdbook-codename
 
 curl -sS https://webi.sh/zig | sh
 source ~/.config/envman/PATH.env
-
-sudo apt-get update
-sudo apt-get install -y clang-format
-
-pipx install cmakelang

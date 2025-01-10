@@ -33,17 +33,15 @@ jobs:
 
       - name: Setup mdBook
         uses: peaceiris/actions-mdbook@v2
-      - run: cargo install mdbook-cmdrun mdbook-codename
-      # Included CMake version is OK.
-      # Included GCC version is OK.
-      - uses: bjia56/setup-cosmocc@main
-      - uses: mlugg/setup-zig@v1
+      # Default CMake version is OK.
 
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
-      - name: Build with mdBook
-        run: mdbook build
+      
+      - run: cmake -B build
+      - run: cmake --build build --target book
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

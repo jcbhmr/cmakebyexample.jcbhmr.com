@@ -4,14 +4,5 @@
         "ghcr.io/devcontainers/features/rust": {},
         "ghcr.io/devcontainers/features/python": {}
     },
-    "updateContentCommand": "./.devcontainer/updateContentCommand.sh",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "dnut.rewrap-revived",
-                "xaver.clang-format",
-                "twxs.cmake"
-            ]
-        }
-    }
+    "updateContentCommand": "./.devcontainer/updateContentCommand.sh"
 }

@@ -1,6 +1,0 @@
-{
-    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu",
-    "workspaceMount": "source=${localWorkspaceFolder}/src/hello-world,target=/workspace,type=bind,consistency=cached",
-    "workspaceFolder": "/workspaces/hello-world",
-    "updateContentCommand": "curl -fsSL https://apt.kitware.com/kitware-archive.sh | sh"
-}

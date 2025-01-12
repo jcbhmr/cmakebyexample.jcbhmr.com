@@ -15,7 +15,7 @@ Make sure you've installed:
 - [mdbook-codename](https://github.com/smallkirby/mdbook-codename)
 - clang-format
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jcbhmr/cmakebyexample.jcbhmr.com?quickstart=1&devcontainer_path=.devcontainer%2Fdevcontainer.json)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/jcbhmr/cmakebyexample.jcbhmr.com?quickstart=1)
 
 The custom `theme/highlight.js` is needed because the default mdBook `highlight.js` doesn't include the some languages. To regenerate a custom build of `theme/highlight.js` use `./task.cmake generate`.
 

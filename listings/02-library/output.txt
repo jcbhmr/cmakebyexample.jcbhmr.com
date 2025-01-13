@@ -1,0 +1,22 @@
+$ cmake -B ./build/
+-- The C compiler identification is GNU 9.4.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Configuring done (0.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspaces/cmakebyexample.jcbhmr.com/listings/03-library/build
+$ cmake --build ./build/
+[ 50%] Building C object CMakeFiles/greeter.dir/src/lib.c.o
+[100%] Linking C static library libgreeter.a
+[100%] Built target greeter
+$ nm ./build/libgreeter.a 
+
+lib.c.o:
+                 U _GLOBAL_OFFSET_TABLE_
+0000000000000000 T greeting_for
+                 U malloc
+                 U sprintf
+                 U strlen

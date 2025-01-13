@@ -1,0 +1,27 @@
+$ CC=clang-18 CXX=clang++-18 cmake -B ./build/
+-- The C compiler identification is Clang 18.1.8
+-- The CXX compiler identification is Clang 18.1.8
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/clang-18 - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/clang++-18 - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring done (0.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /workspaces/cmakebyexample.jcbhmr.com/listings/05-set-c-cxx-standard/build
+$ cmake --build ./build/
+[ 25%] Building C object CMakeFiles/hello-c23.dir/src/bin/hello-c23.c.o
+[ 50%] Linking C executable hello-c23
+[ 50%] Built target hello-c23
+[ 75%] Building CXX object CMakeFiles/hello-cxx23.dir/src/bin/hello-cxx23.cpp.o
+[100%] Linking CXX executable hello-cxx23
+[100%] Built target hello-cxx23
+$ ./build/hello-c23
+__STDC_VERSION__=202311
+$ ./build/hello-cxx23
+__cplusplus=202302
